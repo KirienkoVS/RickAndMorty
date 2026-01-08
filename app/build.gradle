@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.swiperefreshlayout)
 
     // splashscreen
     implementation(libs.androidx.core.splashscreen)
@@ -77,7 +78,6 @@ dependencies {
     // room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
-    implementation(libs.legacy.support)
     ksp(libs.androidx.room.compiler)
     // paging 3 integration
     implementation(libs.androidx.room.paging)
