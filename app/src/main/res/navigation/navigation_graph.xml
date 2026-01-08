@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/characters_page"
-        android:name="com.example.rickandmorty.ui.characters.CharactersFragment"
+        android:name="com.example.rickandmorty.ui.view.CharactersFragment"
         android:label="@string/characters_bottom_menu"
         tools:layout="@layout/characters_fragment">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/locations_page"
-        android:name="com.example.rickandmorty.ui.locations.LocationsFragment"
+        android:name="com.example.rickandmorty.ui.view.LocationsFragment"
         android:label="@string/locations_bottom_menu"
         tools:layout="@layout/locations_fragment">
         <action
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/episodes_page"
-        android:name="com.example.rickandmorty.ui.episodes.EpisodesFragment"
+        android:name="com.example.rickandmorty.ui.view.EpisodesFragment"
         android:label="@string/episodes_bottom_menu"
         tools:layout="@layout/episodes_fragment">
         <action
@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/characterDetailsFragment"
-        android:name="com.example.rickandmorty.ui.characters.CharacterDetailsFragment"
+        android:name="com.example.rickandmorty.ui.view.CharacterDetailsFragment"
         android:label="Character details"
         tools:layout="@layout/fragment_character_details" >
         <argument
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/episodeDetailsFragment"
-        android:name="com.example.rickandmorty.ui.episodes.EpisodeDetailsFragment"
+        android:name="com.example.rickandmorty.ui.view.EpisodeDetailsFragment"
         android:label="Episode details" >
         <argument
             android:name="episodeID"
@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/locationDetailsFragment"
-        android:name="com.example.rickandmorty.ui.locations.LocationDetailsFragment"
+        android:name="com.example.rickandmorty.ui.view.LocationDetailsFragment"
         android:label="Location details">
         <argument
             android:name="locationID"

@@ -2,13 +2,13 @@ package com.example.rickandmorty.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.rickandmorty.db.AppDatabase
-import com.example.rickandmorty.db.characters.CharacterDao
-import com.example.rickandmorty.db.characters.CharacterRemoteKeysDao
-import com.example.rickandmorty.db.episodes.EpisodeDao
-import com.example.rickandmorty.db.episodes.EpisodeRemoteKeysDao
-import com.example.rickandmorty.db.locations.LocationDao
-import com.example.rickandmorty.db.locations.LocationRemoteKeysDao
+import com.example.rickandmorty.data.datasource.db.AppDatabase
+import com.example.rickandmorty.data.datasource.db.dao.CharacterDao
+import com.example.rickandmorty.data.datasource.db.dao.CharacterRemoteKeysDao
+import com.example.rickandmorty.data.datasource.db.dao.EpisodeDao
+import com.example.rickandmorty.data.datasource.db.dao.EpisodeRemoteKeysDao
+import com.example.rickandmorty.data.datasource.db.dao.LocationDao
+import com.example.rickandmorty.data.datasource.db.dao.LocationRemoteKeysDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

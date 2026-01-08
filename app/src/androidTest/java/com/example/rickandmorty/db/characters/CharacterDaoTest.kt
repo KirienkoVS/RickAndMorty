@@ -2,8 +2,9 @@ package com.example.rickandmorty.db.characters
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.filters.SmallTest
-import com.example.rickandmorty.db.AppDatabase
-import com.example.rickandmorty.model.CharacterData
+import com.example.rickandmorty.data.datasource.db.dao.CharacterDao
+import com.example.rickandmorty.data.datasource.db.AppDatabase
+import com.example.rickandmorty.data.datasource.db.entity.CharacterData
 import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest

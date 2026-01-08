@@ -1,7 +1,7 @@
 package com.example.rickandmorty.di
 
 import android.util.Log
-import com.example.rickandmorty.api.RickAndMortyApi
+import com.example.rickandmorty.data.datasource.api.RickAndMortyApi
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
