@@ -67,7 +67,7 @@ class CharacterRepository @Inject constructor(
                 if (apiResponse.isSuccessful) {
                     apiResponse.body()?.let { response ->
                         val episodeData = response.map {
-                            EpisodeData(id = it.id, name = it.name, airDate = it.air_date, episodeNumber = it.episode,
+                            EpisodeData(id = it.id, name = it.name, airDate = it.airDate, episodeNumber = it.episode,
                                 characters = it.characters, url = it.url, created = it.created)
                         }
                         database.episodeDao().insertEpisodes(episodeData)
