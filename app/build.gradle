@@ -1,9 +1,9 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
     id 'kotlin-kapt'
-    id 'androidx.navigation.safeargs.kotlin'
-    id 'dagger.hilt.android.plugin'
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.navigation.safeargs)
 }
 
 android {
@@ -37,71 +37,71 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.13.1'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.11.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.constraintlayout)
 
     // splashscreen
-    implementation 'androidx.core:core-splashscreen:1.0.1'
+    implementation(libs.androidx.core.splashscreen)
 
     // hilt
-    implementation 'com.google.dagger:hilt-android:2.51.1'
-    kapt 'com.google.dagger:hilt-compiler:2.51.1'
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
     // kotlin serialization
-    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3'
+    implementation(libs.kotlinx.serialization.json)
 
     // coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0'
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
 
     // lifecycle components
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     // navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.7.7'
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
     // paging library
-    implementation 'androidx.paging:paging-runtime:3.2.1'
+    implementation(libs.androidx.paging.runtime)
 
     // retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.logging.interceptor)
 
     // room
-    implementation 'androidx.room:room-runtime:2.6.1'
-    implementation 'androidx.room:room-ktx:2.6.1'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    kapt 'androidx.room:room-compiler:2.6.1'
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.legacy.support)
+    kapt(libs.androidx.room.compiler)
     // paging 3 integration
-    implementation 'androidx.room:room-paging:2.6.1'
+    implementation(libs.androidx.room.paging)
 
     // glide
-    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation(libs.glide)
 
     // leak canary
 //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
 
     // Unit testing
-    testImplementation 'junit:junit:4.13.2'
+    testImplementation(libs.junit)
     // assertion
-    testImplementation "com.google.truth:truth:1.4.2"
+    testImplementation(libs.truth)
 
     // Instrumental testing
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    androidTestImplementation 'androidx.test:rules:1.5.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.5.1'
-    androidTestImplementation 'com.google.truth:truth:1.4.2'
-    androidTestImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0'
-    androidTestImplementation 'androidx.arch.core:core-testing:2.2.0'
-    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.51.1'
-    androidTestImplementation 'org.mockito:mockito-android:5.11.0'
-    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.51.1'
-    debugImplementation 'androidx.fragment:fragment-testing:1.6.2'
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.espresso.core)
+    androidTestImplementation(libs.androidx.test.rules)
+    androidTestImplementation(libs.androidx.test.espresso.contrib)
+    androidTestImplementation(libs.truth)
+    androidTestImplementation(libs.kotlinx.coroutines.test)
+    androidTestImplementation(libs.androidx.test.arch.core.testing)
+    androidTestImplementation(libs.hilt.testing)
+    androidTestImplementation(libs.mockito.android)
+    kaptAndroidTest(libs.hilt.compiler)
+    debugImplementation(libs.fragment.testing)
 }
